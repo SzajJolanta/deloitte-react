@@ -1,21 +1,30 @@
-const tags = {
-    react: 'React',
-    javascript: 'Javascript',
-    news: 'News',
+enum Tags {
+    REACT = 'React',
+    JAVASCRIPT = 'Javascript',
+    NEWS = 'News'
+};
+
+interface Book {
+    title: string;
+    author: string;
+    tags: Tags[];
+    published: number;
+    bestseller?: boolean;
+    related?: Book[];
 }
 
-const books = [
+const books: Book[] = [
     {
         title: 'React w praktyce',
         author: 'Jan Kowalski',
-        tags: [tags.react, tags.javascript],
+        tags: [Tags.REACT, Tags.JAVASCRIPT],
         published: 2022,
         bestseller: true,
         related: [
             {
                 title: 'React 18 - przyszło nowe',
                 author: 'Danny California',
-                tags: [tags.react, tags.news],
+                tags: [Tags.REACT, Tags.NEWS],
                 published: 2022,
             }
         ]
@@ -30,7 +39,7 @@ const books = [
     {
         title: 'Javascript w domu i w pracy',
         author: 'Janusz Nowak',
-        tags: [tags.javascript],
+        tags: [Tags.JAVASCRIPT],
         published: 1999,
         bestseller: true,
     }
