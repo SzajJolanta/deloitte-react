@@ -23,4 +23,5 @@
 |ECMAScript 2015+|`task/ecmascript`|30 minut|
 |Typescript|`task/typescript`|20 minut|
 |React - tworzenie komponentów|`task/react-basics`|20 minut|
+|React - state|`task/state`|20 minut|
 
