@@ -24,9 +24,38 @@ const data = [
     },
 ]
 
+class ListItem extends React.Component {
+    render() {
+        return <li style={{
+            padding: 10,
+            borderBottom: this.props.isLast ? '0' : '2px solid blue'
+        }}>{this.props.title} ({this.props.estimation})</li>
+    }
+}
+
+class List extends React.Component {
+    render() {
+        return <ul>
+            {
+                this.props.data
+                    .sort((a, b) => {
+                        if (a.estimation < b.estimation) {
+                            return 1;
+                        } 
+                        return -1
+                    })
+                    .map((item, index) => <ListItem {...item} isLast={index === this.props.data.length - 1} />)
+            }
+        </ul>
+    }
+}
+
 class App extends React.Component {
     render() {
-        return <div>Lista tematów do rozpoznania</div>
+        return <div style={{ fontFamily: 'sans-serif' }}>
+            <h1>Lista tematów do rozpoznania</h1>
+            <List data={data} />    
+        </div>
     }
 }
 
