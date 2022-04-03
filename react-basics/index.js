@@ -44,7 +44,7 @@ class List extends React.Component {
                         } 
                         return -1
                     })
-                    .map((item, index) => <ListItem {...item} isLast={index === this.props.data.length - 1} />)
+                    .map((item, index) => <ListItem key={item.id} {...item} isLast={index === this.props.data.length - 1} />)
             }
         </ul>
     }
