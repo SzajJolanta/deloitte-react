@@ -39,3 +39,6 @@ Każde zadanie jest na osobnym branchu. Branche nie przenikają się i każdy ma
 |React - cykl życia|`task/lifecycle`|lifecycle|20 minut|
 |React - hooks|`task/hooks`|hooks|30 minut|
 
+## Kontakt
+
+mail@mateuszjablonski.com

@@ -50,3 +50,11 @@ class App2 extends React.Component {
     }
 }
 
+<List2 title="tdad" a="dasd" b="dasd" c={true}/>
+
+
+const List2 = (props) => {
+    return <div title={props.title} a={props.a} b={props.b} c={props.c}></div>
+
+    // return <div {...props}></div>
+}
