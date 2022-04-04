@@ -1,15 +1,18 @@
-import React from "react";
+import React, { FC, useState } from "react";
+import { ItemDetails } from "../../App";
 import './Item.css';
 
-class Item extends React.Component {
-    handleItemClick() {
-        this.setState({ checked: !this.state.checked })
+const Item: FC<ItemDetails & { removeItem: (id: number) => void }> = ({ name, id, removeItem }) => {
+    const [checked, setChecked] = useState(false);
+
+    const handleItemClick = () => {
+        setChecked(!checked);
     }
 
-    render() {
-        const { name } = this.props;
-        return <li onClick={this.handleItemClick.bind(this)} className="item">{name}</li>
-    }
+    return <li onClick={handleItemClick} className={`item ${checked && 'isChecked'}`}>
+        {name}
+        <button onClick={() => removeItem(id)}>Usuń</button>
+    </li>
 }
 
 export default Item;

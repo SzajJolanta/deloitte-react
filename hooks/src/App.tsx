@@ -2,7 +2,12 @@ import React from 'react';
 import './App.css';
 import List from './components/List/List';
 
-const data = [
+export interface ItemDetails {
+  id: number;
+  name: string;
+}
+
+const data: ItemDetails[] = [
   {
     id: 1,
     name: 'Typescript',
