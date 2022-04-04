@@ -1,4 +1,6 @@
+# Tworzenie aplikacji z użyciem React
 
+**Data:** 04-06 kwietnia 2022
 
 ## Agenda
 
