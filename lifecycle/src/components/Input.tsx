@@ -1,8 +1,28 @@
 import React from "react";
 
-class Input extends React.Component {
-    state: any = {
+interface InputProps {
+    id: string;
+}
+
+interface InputState {
+    value: string;
+}
+
+class Input extends React.Component<InputProps, InputState> {
+    public state = {
         value: '',
+    }
+
+    componentDidMount() {
+        alert('mount' + this.props.id)
+    }
+
+    componentDidUpdate() {
+        alert('update' + this.props.id)
+    }
+
+    componentWillUnmount() {
+        alert('unmount' + this.props.id)
     }
 
     render() {
