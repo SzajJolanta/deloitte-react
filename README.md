@@ -37,8 +37,11 @@ Każde zadanie jest na osobnym branchu. Branche nie przenikają się i każdy ma
 |3|React - tworzenie komponentów|`task/react-basics`|react-basics|20 minut|
 |4|React - state|`task/state`|react-state|30 minut|
 |5|React - cykl życia|`task/lifecycle`|lifecycle|20 minut|
-|6|React - effects|`task/effects`|effects|30 minut|
+|6|React - effects|`task/effects`|effects|20 minut|
 |7|React - hooks|`task/hooks`|hooks|30 minut|
+|8|React - formularze|`task/forms`|forms|30 minut|
+|9|React - router|`task/router`|router|20 minut|
+|10|Style|`task/styles`|styles|20 minut|
 
 ## Kontakt
 
