@@ -30,14 +30,15 @@ Każde zadanie jest na osobnym branchu. Branche nie przenikają się i każdy ma
 
 ## Zadania
 
-|Zagadnienie|Nazwa brancha|Katalog|Czas|
-|---|---|---|---|
-|ECMAScript 2015+|`task/ecmascript`|ecmascript|30 minut|
-|Typescript|`task/typescript`|typescript|20 minut|
-|React - tworzenie komponentów|`task/react-basics`|react-basics|20 minut|
-|React - state|`task/state`|react-state|20 minut|
-|React - cykl życia|`task/lifecycle`|lifecycle|20 minut|
-|React - hooks|`task/hooks`|hooks|30 minut|
+|Lp.|Zagadnienie|Nazwa brancha|Katalog|Czas|
+|---|---|---|---|---|
+|1|ECMAScript 2015+|`task/ecmascript`|ecmascript|30 minut|
+|2|Typescript|`task/typescript`|typescript|20 minut|
+|3|React - tworzenie komponentów|`task/react-basics`|react-basics|20 minut|
+|4|React - state|`task/state`|react-state|30 minut|
+|5|React - cykl życia|`task/lifecycle`|lifecycle|20 minut|
+|6|React - effects|`task/effects`|effects|30 minut|
+|7|React - hooks|`task/hooks`|hooks|30 minut|
 
 ## Kontakt
 
