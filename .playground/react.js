@@ -24,3 +24,29 @@ class App extends React.Component {
         return <Button type="button"/>
     }
 }
+
+
+const data = [ 1, 2, 3 ];
+
+class List extends React.Component {
+    render() {
+        if (!this.props.shouldRender) {
+            return null;
+        }
+
+        return (
+            <div className={this.props.className}>
+                {
+                    this.props.items.map(item => <span>{item}</span>)
+                }
+            </div>
+        )
+    }
+}
+
+class App2 extends React.Component {
+    render() {
+        return <List items={data} className="abc" shouldRender={false} />
+    }
+}
+
