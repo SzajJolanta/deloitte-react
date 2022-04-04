@@ -43,6 +43,8 @@ const plantC: Pick<Plant<string>, 'name' | 'ground'> = {
     ground: 'as'
 }
 
+// inne typy pomocnicze: Omit, Partial, Record, Readonly, Pick, Required
+
 const plant: Plant<string> = {
     name: 'Kaktus',
     origin: 'Gobi',
