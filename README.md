@@ -25,4 +25,5 @@
 |React - tworzenie komponentów|`task/react-basics`|20 minut|
 |React - state|`task/state`|20 minut|
 |React - cykl życia|`task/lifecycle`|20 minut|
+|React - hooks|`task/hooks`|30 minut|
 
