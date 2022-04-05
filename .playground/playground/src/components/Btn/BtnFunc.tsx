@@ -1,4 +1,5 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
+import React, { FunctionComponent, useState, useEffect, SyntheticEvent } from "react";
+import { getCurrentYear } from "../../utils/date";
 
 interface BtnProps {
     type: "button" | "submit" | "reset";
@@ -8,7 +9,7 @@ interface BtnProps {
 const Btn: FunctionComponent<BtnProps> = (props) => {
     const [ counter, setCounter ] = useState<number>(0);
 
-    const changeCounter = (increment = 1) => {
+    const changeCounter = (_: SyntheticEvent, increment = 1) => {
         setCounter(counter + increment);
     }
 
@@ -34,16 +35,16 @@ const Btn: FunctionComponent<BtnProps> = (props) => {
 
     return (
         <div>
-            <p>Kliknięto {counter} razy!</p>
+            <p>Kliknięto {counter} razy {getCurrentYear()} roku!</p>
             <button
                 type={props.type}
-                onClick={() => changeCounter()}
+                onClick={changeCounter}
             >
                 {props.title}
             </button>
             <button
                 type={props.type}
-                onClick={() => changeCounter(5)}
+                onClick={(e: SyntheticEvent) => changeCounter(e, 5)}
             >
                 {props.title} Zmienia o 5
             </button>

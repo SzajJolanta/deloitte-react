@@ -1,4 +1,5 @@
 import React from "react";
+import { getCurrentYear } from "../../utils/date";
 
 interface BtnProps {
     type: "button" | "submit" | "reset";
@@ -25,7 +26,7 @@ class Btn extends React.Component<BtnProps, BtnState> {
     }
 
     a() {
-        this.props // Btn
+        // this.props === Btn
     }
 
     componentDidMount() {
@@ -53,7 +54,7 @@ class Btn extends React.Component<BtnProps, BtnState> {
     render() {
         return (
             <div>
-                <p>Kliknięto {this.state.counter} razy!</p>
+                <p>Kliknięto {this.state.counter} razy w {getCurrentYear()} roku!</p>
                 <button
                     type={this.props.type}
                     onClick={() => this.changeCounter()}
