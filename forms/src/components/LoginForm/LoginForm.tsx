@@ -3,38 +3,44 @@ import Button from '../Button/Button';
 import Input from '../Input/Input';
 
 const LoginForm = () => {
-    const [ name, setName ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ password, setPassword ] = useState('');
+    const [values, setValues] = useState({
+        name: '',
+        email: '',
+        password: ''
+    })
 
     const handleOnSubmit = (e: SyntheticEvent) => {
         e.preventDefault();
         
-        console.log(name, email, password);
+        console.log(values);
+    }
+
+    const handleOnChange = (name: string, value: string) => {
+        setValues({ ...values, [name]: value });
     }
  
     return (
         <form onSubmit={handleOnSubmit}>
             <Input
                 id="name"
-                value={name}
-                onChange={setName}
+                value={values.name}
+                onChange={handleOnChange}
                 inputType="text"
                 placeholder="Podaj swój login" 
-                required   
+                required
             />
             <Input 
                 id="email" 
-                value={email}
-                onChange={setEmail}
+                value={values.email}
+                onChange={handleOnChange}
                 inputType="email" 
                 placeholder="Podaj email"  
                 required  
             />
             <Input
                 id="password"
-                value={password}
-                onChange={setPassword}
+                value={values.password}
+                onChange={handleOnChange}
                 inputType="password"
                 placeholder="Wprowadź hasło"
                 required

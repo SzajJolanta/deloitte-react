@@ -1,5 +1,5 @@
 export interface InputProps {
-    onChange: (value: string) => void;
+    onChange: (name: string, value: string) => void;
     inputType: string;
     id: string;
     value: string;
