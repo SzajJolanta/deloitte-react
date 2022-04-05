@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface BtnProps {
     type: "button" | "submit" | "reset";
     title: string;
@@ -5,6 +7,10 @@ interface BtnProps {
 
 interface BtnState {
     counter: number;
+}
+
+const BtnObj = {
+    clickHandler: function() {}
 }
 
 class Btn extends React.Component<BtnProps, BtnState> {
@@ -18,7 +24,12 @@ class Btn extends React.Component<BtnProps, BtnState> {
 
         this.state = {
             counter: 0,
+            clicks: 0,
         }
+    }
+
+    clickHandler() {
+        this.setState({ clicks: clicks + 1})
     }
 
     changeCounter() {
@@ -45,3 +56,10 @@ class App3 extends React.Component {
         return <Btn />
     }
 }
+
+
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', function(event) {
+    console.log(this);
+})
