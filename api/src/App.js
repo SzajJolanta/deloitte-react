@@ -26,6 +26,7 @@ function App() {
     <Router>
       <div className="App">
           <Header />
+          <p>To jest moja aplikacja</p>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/contact' element={<ContactPage />} />
