@@ -1,0 +1,13 @@
+@use '../../styles/colors';
+
+.footer {
+    background: colors.$background;
+    padding: 2rem;
+    display: flex;
+
+    justify-content: space-between;
+
+    .heart {
+        color: red;
+    }
+}

@@ -1,5 +1,9 @@
 .nav {
-    padding: 1rem;
+    list-style: none;
+}
+
+.nav li {
+    padding: 0 2rem;
 }
 
 .active {
