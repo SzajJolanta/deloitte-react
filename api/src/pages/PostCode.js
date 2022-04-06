@@ -10,10 +10,13 @@ const PostCodePage = ({ handleError }) => {
                 return res.json()
             })
             .then(data => {
+                if (data.status === 404) {
+                    handleError();
+                }
                 setPostCode(data.result);
             })
             .catch((err) => {
-                console.log(err);
+                handleError();
             })
             .finally(() => {
                 setIsLoading(false);
@@ -27,7 +30,6 @@ const PostCodePage = ({ handleError }) => {
             
     //         setPostCode(res.result);
     //     } catch(err) {
-    //         console.log('asdad');
     //         handleError();
     //     } finally {
     //         setIsLoading(false);
