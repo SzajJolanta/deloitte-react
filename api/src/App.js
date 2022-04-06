@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import HomePage from './pages/Home';
 import PostCodePage from './pages/PostCode';
+import CheckPostCodePage from './pages/CheckPostCode';
 import Error from './components/Error/Error';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/article/:id' element={<Article />} />
             <Route path='/postcode' element={<PostCodePage handleError={handleError} />} />
+            <Route path="/check-postcode" element={<CheckPostCodePage />} />
           </Routes>
       </div>
       <Footer />
